@@ -50,7 +50,7 @@
 
   /* Layout & Geometry */
   --header-h: 77px;   /* 48px brand mark + 14px padding x2 + 1px border */
-  --tabs-h: 91px;   /* jump bar: 66px pill + 12px padding x2 + 1px border */
+  --tabs-h: 69px;   /* jump bar: 48px pill + 10px padding x2 + 1px border */
   --shell: 1240px;
   --gutter: clamp(20px, 5vw, 48px);
   --section-y: clamp(76px, 9vw, 136px);
@@ -2107,7 +2107,7 @@ figure.photo {
   position: sticky;
   top: var(--header-h);
   z-index: 250;                 /* under the header (300), over page content */
-  padding-block: 12px;
+  padding-block: 10px;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
@@ -2122,9 +2122,9 @@ figure.photo {
 
 /* same pill language as the product category filter */
 .section-tabs a {
-  padding: 16px 34px;
+  padding: 10px 22px;
   border-radius: 999px;
-  font-size: 1.12rem;
+  font-size: 0.92rem;
   font-weight: 600;
   white-space: nowrap;
   color: var(--forest-900);
@@ -2149,8 +2149,8 @@ figure.photo {
   /* wrapped rows would eat the viewport if this stayed pinned */
   .section-tabs { position: static; }
   .section-tabs ~ section[id] { scroll-margin-top: calc(var(--header-h) + 20px); }
-  .section-tabs a { padding: 12px 22px; font-size: 0.95rem; }
-  .section-tabs-inner { gap: 10px; }
+  .section-tabs a { padding: 8px 16px; font-size: 0.85rem; }
+  .section-tabs-inner { gap: 8px; }
 }
 
 /* "At a glance" — stat ribbon sitting directly under the hero */
