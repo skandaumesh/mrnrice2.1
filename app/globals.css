@@ -2353,6 +2353,35 @@ figure.photo {
   margin-top: 6px;
 }
 
+/* Payment QR block (products page) */
+.pay {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(28px, 4vw, 60px);
+  align-items: center;
+}
+
+.pay-qr {
+  flex: none;
+  width: clamp(230px, 26vw, 300px);
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: var(--white);
+  line-height: 0;
+}
+
+.pay-qr img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 860px) {
+  .pay { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .pay .specs { text-align: left; }
+}
+
 /* Google Maps embed */
 .map {
   border: 1px solid var(--line);

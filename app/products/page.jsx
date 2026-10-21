@@ -5,7 +5,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import CTA from "@/components/CTA";
 import TiltCard from "@/components/TiltCard";
 import ProductGridInteractive from "@/components/ProductGridInteractive";
-import { products, packSizes, company } from "@/lib/products";
+import { products, packSizes, company, telHref } from "@/lib/products";
 import { photos } from "@/lib/photos";
 
 export const metadata = {
@@ -146,6 +146,44 @@ export default function ProductsPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ---------- PAYMENT ---------- */}
+      <section className="section cream" id="payment">
+        <div className="shell pay">
+          <Reveal className="pay-qr">
+            <img
+              src={company.payment.qr}
+              alt={`${company.payment.provider} payment QR code for ${company.name}`}
+            />
+          </Reveal>
+
+          <Reveal>
+            <span className="eyebrow">Payments</span>
+            <h2>Pay by UPI or card</h2>
+            <p className="lede" style={{ marginTop: 16 }}>
+              Scan the code with any UPI app &mdash; Google Pay, PhonePe, Paytm, BHIM &mdash; or
+              pay by RuPay, Mastercard or Visa through our {company.payment.provider} account.
+            </p>
+
+            <dl className="specs" style={{ gridTemplateColumns: "1fr" }}>
+              <div>
+                <dt>UPI ID</dt>
+                <dd>{company.payment.upi}</dd>
+              </div>
+              <div>
+                <dt>Terminal ID</dt>
+                <dd>{company.payment.tid}</dd>
+              </div>
+            </dl>
+
+            <p className="muted" style={{ marginTop: 20 }}>
+              Please confirm your variety, quantity and current price with our sales team on{" "}
+              <a href={telHref(company.phones[0].number)}>{company.phones[0].number}</a> before
+              paying, so your order can be matched to the payment.
+            </p>
+          </Reveal>
         </div>
       </section>
 
