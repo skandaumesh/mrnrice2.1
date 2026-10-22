@@ -5,14 +5,17 @@ import ProcessSteps from "@/components/ProcessSteps";
 import CTA from "@/components/CTA";
 import TiltCard from "@/components/TiltCard";
 import ProductGridInteractive from "@/components/ProductGridInteractive";
+import JsonLd from "@/components/JsonLd";
 import { products, packSizes, company, telHref } from "@/lib/products";
 import { photos } from "@/lib/photos";
+import { pageMeta, productListLd, breadcrumbLd } from "@/lib/seo";
 
-export const metadata = {
-  title: "Products",
+export const metadata = pageMeta({
+  path: "/products",
+  title: "MRN Gold Rice — Sona Masuri, RNR & Kolam | MRN Agro",
   description:
-    "The MRN Gold range from MRN Agro Industries, Raichur: Double Old Sona Masuri Raw, Double Old RNR Raw, Double Old Lachkari Kolam Raw and Old Sona Masuri Steam rice, in 5 kg, 10 kg and 26 kg packs with bulk packaging available."
-};
+    "Four MRN Gold rice varieties from Raichur: Double Old Sona Masuri Raw, Double Old RNR Raw, Double Old Lachkari Kolam Raw and Old Sona Masuri Steam. Available in 5 kg, 10 kg and 26 kg packs, with bulk packaging for hotels, wholesalers and distributors."
+});
 
 const groups = [
   {
@@ -37,6 +40,16 @@ const serves = [
 export default function ProductsPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          productListLd(),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" }
+          ])
+        ]}
+      />
+
       <Banner crumb="Products" title={`Meet the ${company.brand} Range`} photoSrc={photos.raw.src}>
         Four rice varieties. One commitment to quality and consistency. Every variety is
         available in 5 kg, 10 kg and 26 kg packs, with bulk packaging also available for

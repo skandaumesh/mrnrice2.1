@@ -10,8 +10,17 @@ import ProductGridInteractive from "@/components/ProductGridInteractive";
 import TiltCard from "@/components/TiltCard";
 import SectionTabs from "@/components/SectionTabs";
 import ReasonsCarousel from "@/components/ReasonsCarousel";
+import JsonLd from "@/components/JsonLd";
 import { appreciation, glance, company } from "@/lib/products";
 import { photos } from "@/lib/photos";
+import { pageMeta, productListLd } from "@/lib/seo";
+
+export const metadata = pageMeta({
+  path: "/",
+  title: "MRN Agro Industries — MRN Gold Rice Manufacturer, Raichur",
+  description:
+    "Rice manufacturer in Raichur, Karnataka since 2003. The MRN Gold range of Double Old Sona Masuri, RNR and Lachkari Kolam raw rice and Old Sona Masuri steam rice, in 5 kg, 10 kg and 26 kg packs, with bulk supply across five states."
+});
 
 /** Jump bar under the hero — each id matches a section below. */
 const sections = [
@@ -26,6 +35,9 @@ const sections = [
 export default function HomePage() {
   return (
     <>
+      {/* the range is shown on the home page too, so describe it here as well */}
+      <JsonLd data={productListLd()} />
+
       {/* ---------- HERO ---------- */}
       <HeroSpotlight className="hero">
         <div className="shell hero-grid">

@@ -3,14 +3,17 @@ import Banner from "@/components/Banner";
 import Reveal from "@/components/Reveal";
 import EnquiryForm from "@/components/EnquiryForm";
 import CTA from "@/components/CTA";
+import JsonLd from "@/components/JsonLd";
 import { company, telHref } from "@/lib/products";
 import { photos } from "@/lib/photos";
+import { pageMeta, breadcrumbLd } from "@/lib/seo";
 
-export const metadata = {
-  title: "Contact us",
+export const metadata = pageMeta({
+  path: "/contact",
+  title: "Contact MRN Agro Industries — Rice Supplier, Raichur",
   description:
-    "Contact MRN Agro Industries in Raichur, Karnataka for MRN Gold rice: pack sizes, bulk requirements, availability and current prices. Sales and accounts numbers, email and address."
-};
+    "Contact MRN Agro Industries in Raichur, Karnataka for MRN Gold rice: pack sizes, bulk requirements, availability and current prices. Sales and accounts numbers, email, address and directions."
+});
 
 const icons = {
   pin: <><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" /><circle cx="12" cy="10" r="2.6" /></>,
@@ -30,6 +33,13 @@ function Icon({ name }) {
 export default function ContactPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Home", path: "/" },
+          { name: "Contact Us", path: "/contact" }
+        ])}
+      />
+
       <Banner crumb="Contact us" title="Let&rsquo;s Talk Rice" photoSrc={photos.field.src}>
         Looking for rice for your home, hotel, retail store, wholesale business or distribution
         network? We would be happy to help.

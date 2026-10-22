@@ -5,14 +5,17 @@ import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
 import CTA from "@/components/CTA";
 import TiltCard from "@/components/TiltCard";
+import JsonLd from "@/components/JsonLd";
 import { values, company } from "@/lib/products";
 import { photos } from "@/lib/photos";
+import { pageMeta, breadcrumbLd } from "@/lib/seo";
 
-export const metadata = {
-  title: "About Us",
+export const metadata = pageMeta({
+  path: "/about",
+  title: "About MRN Agro Industries — Rice Milling Since 2003",
   description:
-    "Founded in 2003 by Mr. Pawan Kumar, MRN Agro Industries manufactures rice in Raichur, Karnataka using Satake machinery from Japan, with a paddy processing capacity of 9 tonnes per hour and FSSAI and AGMARK credentials."
-};
+    "Founded in 2003 by Mr. Pawan Kumar, MRN Agro Industries manufactures rice in Raichur, Karnataka on Satake machinery from Japan, with a paddy processing capacity of 9 tonnes per hour and FSSAI and AGMARK credentials."
+});
 
 const care = [
   {
@@ -32,6 +35,13 @@ const care = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Home", path: "/" },
+          { name: "About Us", path: "/about" }
+        ])}
+      />
+
       <Banner crumb="About us" title="Built on Quality. Growing Through Trust." photoSrc={photos.hand.src}>
         A rice manufacturer from Raichur, Karnataka, producing the {company.brand} range for
         households and businesses since {company.established}.
