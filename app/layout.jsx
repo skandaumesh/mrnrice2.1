@@ -23,6 +23,11 @@ export const metadata = {
   category: "Food & Agriculture",
   icons: { icon: "/logo.jpeg", apple: "/logo.jpeg" },
   alternates: { canonical: SITE_URL },
+  /* Search Console ownership. Public by design — it is visible in page
+     source — so there is no reason to keep it in an env var. */
+  verification: {
+    google: "iZKIzYIz3avDGAfsIUE2c-HJ3Pc_GxyTMR36DnF-zTo"
+  },
   formatDetection: { telephone: true, address: true, email: true },
   robots: {
     index: true,
