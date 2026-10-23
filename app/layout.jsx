@@ -21,7 +21,10 @@ export const metadata = {
   creator: "MRN Agro Industries",
   publisher: "MRN Agro Industries",
   category: "Food & Agriculture",
-  icons: { icon: "/logo.jpeg", apple: "/logo.jpeg" },
+  /* No `icons` entry: app/favicon.ico, app/icon.png and app/apple-icon.png
+     are picked up by Next's file conventions and emit their own tags. The
+     old config pointed at the 422 KB logo.jpeg, which is far too heavy for
+     a favicon, and left /favicon.ico — the first place Google looks — 404ing. */
   alternates: { canonical: SITE_URL },
   /* Search Console ownership. Public by design — it is visible in page
      source — so there is no reason to keep it in an env var. */
