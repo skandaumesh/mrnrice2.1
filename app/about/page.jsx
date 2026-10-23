@@ -14,7 +14,7 @@ export const metadata = pageMeta({
   path: "/about",
   title: "About MRN Agro Industries — Rice Milling Since 2003",
   description:
-    "Founded in 2003 by Mr. Pawan Kumar, MRN Agro Industries manufactures rice in Raichur, Karnataka on Satake machinery from Japan, with a paddy processing capacity of 9 tonnes per hour and FSSAI and AGMARK credentials."
+    "Founded in 2003 by Mr. Pavan Kumar, MRN Agro Industries manufactures rice in Raichur, Karnataka on Satake machinery from Japan, with a paddy processing capacity of 9 tonnes per hour and FSSAI and AGMARK credentials."
 });
 
 const care = [

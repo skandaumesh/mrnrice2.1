@@ -51,7 +51,7 @@ Whether you need rice for your family, hotel, shop, or distribution business, ou
 
 ### Built on Quality. Growing Through Trust.
 
-MRN Agro Industries was founded in 2003 by Mr. Pawan Kumar with a simple purpose: to make premium-quality rice available at affordable, market-aligned prices.
+MRN Agro Industries was founded in 2003 by Mr. Pavan Kumar with a simple purpose: to make premium-quality rice available at affordable, market-aligned prices.
 
 He recognised that rice is an everyday essential for countless families. His focus was not simply on producing good rice, but on delivering the same dependable quality throughout the year. That belief—that lasting success comes from quality and consistency—continues to guide our business.
 
